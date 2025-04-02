@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Login from './components/Login';
+import TodoList from './components/TodoList';
 
-function App() {
-  return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [user, setUser] = useState(null);
+
+    return (
+        <div>
+            {user ? <TodoList username={user} /> : <Login setUser={setUser} />}
+        </div>
+    );
+};
 
 export default App;
