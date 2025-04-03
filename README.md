@@ -5,7 +5,7 @@ A simple full-stack app with a Python (FastAPI) backend and React frontend, runn
 
 1. **Clone the repository:**
    ```bash
-   git clone <REPOSITORY_URL>
+   git clone git@github.com:wandersonsales-dev/fullstack.git
    cd fullstack-challenge
    ```
 
