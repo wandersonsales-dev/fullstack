@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from backend.models.todo import Todo
-from backend.api.services.todos import get_user_todos, create_todo, update_todo, delete_todo
+from models.todo import Todo
+from api.services.todos import get_user_todos, create_todo, update_todo, delete_todo
 
 router = APIRouter()
 

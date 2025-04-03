@@ -1,4 +1,4 @@
-from backend.db import get_user
+from db import get_user
 
 def authenticate_user(username: str, password: str):
     db_user = get_user(username)

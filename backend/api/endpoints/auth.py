@@ -1,6 +1,6 @@
-from fastapi import APIRouter, HTTPExcepetion
-from backend.models.user import User
-from backend.api.services.auth import authenticate_user
+from fastapi import APIRouter, HTTPException
+from models.user import User
+from api.services.auth import authenticate_user
 
 router = APIRouter()
 
@@ -8,5 +8,5 @@ router = APIRouter()
 def login(user: User):
     db_user = authenticate_user(user.username, user.password)
     if not db_user:
-        raise HTTPExcepetion(status_code=401, details="Invalid credentials")
+        raise HTTPException(status_code=401, detail="Invalid credentials")
     return {"message": "Logged in", "username": user.username}

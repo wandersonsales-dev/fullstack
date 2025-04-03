@@ -1,4 +1,4 @@
-from backend.db import todos
+from db import todos
 
 def get_user_todos(username: str):
     return [todo for todo in todos if todo["user"] == username]
